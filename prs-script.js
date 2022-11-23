@@ -4,7 +4,7 @@ const prompt = require("prompt-sync")();
 //Create a Function (getPlayerChoice) to Grab user inputs as choice of paper, rock or scissors
 //Make user input Case insensitive
 function getPlayerChoice(){
-    const playerChoice = (prompt("Please Insert Choice, Paper, Rock or Scissors!")).toUpperCase;
+    const playerChoice = (prompt("Please Insert Choice, Paper, Rock or Scissors!")).toUpperCase();
     if (playerChoice == "PAPER" && playerChoice != " "){
         console.log(`You Choose: Paper`);
         return "Paper";
