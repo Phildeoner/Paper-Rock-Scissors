@@ -80,8 +80,11 @@ function game(){
     let playerScore = 0;
     let computerScore = 0;
 
+    // Loop to play Five rounds of playRound.
         for (let i = 1; i <= 5; i++){
             const play = playRound();
+
+    //Conditions for Scores Update for User and Computer
             if (play === "Won"){
                 playerScore ++;
                 console.log(`Round ${i} Score: User ${playerScore} : ${computerScore} Computer`);
@@ -95,6 +98,8 @@ function game(){
                 break;
             }
         }
+    
+        // Compile playerScore and computerScore and Declare a Winner.
         if (playerScore > computerScore){
             console.log("Congratulations, You Won the Game!!!");
         }else if(playerScore < computerScore){
