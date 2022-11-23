@@ -37,4 +37,42 @@ function getComputerChoice(){
 //getComputerChoice();
 
 //Create a Function (playRound) to call getPlayerChoice and getComputerChoice to play one round of the game
+function playRound(){
+    const playerSelection = getPlayerChoice();
+    const computerSelection = getComputerChoice();
+        if (playerSelection === computerSelection){
+            console.log("Its a Tie, Try Again!!!");
+            return "Tie";
+        }else {
+            if (playerSelection === "Paper"){
+                if (computerSelection === "Rock"){
+                    console.log("You Won!!! Paper Covers Rock.");
+                    return "Won";
+                }else {
+                    console.log("You Lose!!! Scissors Cuts Paper.");
+                    return "Lose";
+                }
+            }else if (playerSelection === "Rock"){
+                if (computerSelection === "Scissors"){
+                    console.log("You Won!!! Rock Smashes Scissors.");
+                    return "Won";
+                }else {
+                    console.log("You Lose!!! Paper Covers Rock.");
+                    return "Lose";
+                }
+            }else if(playerSelection === "Scissors"){
+                if (computerSelection === "Paper"){
+                    console.log("You Won!!! Scissors Cuts Paper.");
+                    return "Won";
+                }else {
+                    console.log("You Lose!!! Rock Smashes Scissors.");
+                    return "Lose"; 
+                }
+            }else {
+            console.log("Try Again!!!");
+        }
+    }
+}
+//playRound();
+
 //Craete a function (game) to call all three functions and loop the game to play five rounds and update scores.
