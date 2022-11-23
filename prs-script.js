@@ -76,3 +76,12 @@ function playRound(){
 //playRound();
 
 //Craete a function (game) to call all three functions and loop the game to play five rounds and update scores.
+function game(){
+    let playerScore = 0;
+    let computerScore = 0;
+
+        for (let i = 1; i <= 5; i++){
+            const play = playRound();
+        }
+}
+game();
