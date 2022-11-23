@@ -95,6 +95,12 @@ function game(){
                 break;
             }
         }
-        
+        if (playerScore > computerScore){
+            console.log("Congratulations, You Won the Game!!!");
+        }else if(playerScore < computerScore){
+            console.log("Oh Oh You Lose to Computer!!!");
+        }else {
+            console.log("It was an Exciting Game to Decide, Its A Tie!!!");
+        }
 }
 game();
