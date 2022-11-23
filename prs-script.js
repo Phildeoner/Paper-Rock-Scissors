@@ -82,6 +82,19 @@ function game(){
 
         for (let i = 1; i <= 5; i++){
             const play = playRound();
+            if (play === "Won"){
+                playerScore ++;
+                console.log(`Round ${i} Score: User ${playerScore} : ${computerScore} Computer`);
+            }else if (play === "Lose"){
+                computerScore ++;
+                console.log(`Round ${i} Score: User ${playerScore}  : ${computerScore}  Computer`);
+            }else if (play === "Tie"){
+                console.log(`Round ${i} Score: User ${playerScore}  : ${computerScore} Computer`);
+            }else {
+                console.log(`Round ${i} is Cancelled for Wrong Input, Try Again!`);
+                break;
+            }
         }
+        
 }
 game();
